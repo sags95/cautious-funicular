@@ -1,0 +1,67 @@
+{
+  "collection": "programs",
+  "label": "Programs",
+  "public": "true",
+  "description": "Special things for special people",
+  "fields": {
+    "title": {
+      "type": "string",
+      "description": "The title of the professional development program."
+    },
+    "description": {
+      "type": "string",
+      "description": "A detailed description of the program."
+    },
+    "programStatus": {
+      "type": "string",
+      "description": "Current status of the program (e.g., active, planning, completed)."
+    },
+    "programStatusDate": {
+      "type": "date",
+      "description": "The date when the program status was last updated."
+    },
+      "planYear": {
+      "type": "string",
+      "description": "The year in which the program is planned."
+    },
+    "planDate": {
+      "type": "date",
+      "description": "The specific date of planning."
+    },
+    "audience": {
+      "type": "enum",
+      "description": "A predefined list of audience types.",
+      "values": ["AudienceType1", "AudienceType2", "AudienceType3"] 
+    },
+    "topicArea": {
+      "type": "enum",
+      "description": "A predefined list of topic areas.",
+      "values": ["TopicArea1", "TopicArea2", "TopicArea3"] 
+    },
+    "frontMatter": {
+      "type": "boolean",
+      "description": "Indicates if front matter is included in the program materials."
+    },
+    "store": {
+      "type": "boolean",
+      "description": "Indicates if the program is stored or archived."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes or comments about the program planning."
+    }
+  },
+  "events": {
+    "types": [
+      {
+        "id": "created"
+      },
+      {
+        "id": "updated"
+      },
+      {
+        "id": "deleted"
+      }
+    ]
+  }
+}

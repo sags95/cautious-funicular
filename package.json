@@ -1,0 +1,9 @@
+{
+  "name": "vehicle_marketplace",
+  "version": "1.0.0",
+  "description": "Stores cars",
+  "scripts": {},
+  "devDependencies": {
+    "@swell/app-types": "^1.0.5"
+  }
+}

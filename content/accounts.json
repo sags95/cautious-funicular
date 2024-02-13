@@ -1,0 +1,43 @@
+{
+  "collection": "accounts",
+  "description": "See their vehicles",
+  "fields": [
+    {
+      "id": "vehicle",
+      "key_field": "make",
+      "label": "Vehicles",
+      "type": "lookup",
+      "description": "Vehicles owned by the customer",
+      "collection": "vehicles"
+    }
+  ],
+  "views": [
+    {
+      "id": "list",
+      "fields": [
+        {
+          "id": "vehicle"
+        }
+      ]
+    },
+    {
+      "id": "edit",
+      "tabs": [
+        {
+          "id": "vehicle",
+          "label": "Vehicles",
+          "fields": [
+            {
+              "id": "vehicle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "new",
+      "tabs": [],
+      "fields": []
+    }
+  ]
+}

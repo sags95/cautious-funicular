@@ -1,0 +1,8 @@
+{
+	"id": "vehicle_marketplace",
+	"version": "1.0.0",
+	"name": "Vehicle Marketplace",
+	"description": "Stores cars",
+	"type": "admin",
+	"permissions": []
+}

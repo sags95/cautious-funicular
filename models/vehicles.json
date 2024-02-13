@@ -1,0 +1,67 @@
+{
+  "collection": "vehicles",
+  "label": "Vehicles",
+  "description": "Stores vehicles",
+  "public": true,
+  "fields": {
+    "make": {
+      "type": "string",
+      "required": true
+    },
+    "model": {
+      "type": "string",
+      "required": true
+    },
+    "year": {
+      "type": "int",
+      "required": true
+    },
+    "status": {
+      "type": "string",
+      "enum": ["submitted", "approved"],
+      "default": "submitted"
+    },
+    "customer_id": {
+      "type": "objectid",
+      "required": true
+    },
+    "customer": {
+      "type": "link",
+      "model": "accounts",
+      "key": "customer_id"
+    },
+    "items": {
+      "type": "array",
+      "public": true,
+      "value_type": "object",
+      "fields": {
+        "id": {
+          "type": "objectid",
+          "auto": true
+        },
+        "price": {
+          "type": "currency"
+        }
+      }
+    }
+  },
+  "events": {
+    "types": [
+      {
+        "id": "created"
+      },
+      {
+        "id": "updated"
+      },
+      {
+        "id": "deleted"
+      },
+      {
+        "id": "approved",
+        "conditions": {
+          "$formula": "and($record.status != 'approved', status == 'approved')"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "label": "Vehicle Notification Settings",
+    "fields": [
+        {
+            "id": "new_vehicle_email_enabled",
+            "type": "toggle",
+            "label": "Send email to admin when new vehicle is created",
+            "description": "Toggle to disable automatically sending an email notification when new vehicle is created",
+            "default": true
+        }
+    ]
+}

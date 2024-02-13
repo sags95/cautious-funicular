@@ -1,0 +1,15 @@
+{
+  "collection": "vehicles",
+  "label": "Vehicle Created",
+  "subject": "New Vehicle Created",
+  "event": "created",
+  "conditions": {},
+  "method": "email",
+  "description": "",
+  "admin": true,
+  "repeat": true,
+  "query": {
+    "expand": []
+  },
+  "sample": {}
+}

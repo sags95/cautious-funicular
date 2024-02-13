@@ -1,0 +1,136 @@
+{
+  "collection": "programs",
+  "label": "Programs",
+  "description": "Special things for special people",
+  "fields": [
+    {
+      "id": "title",
+      "label": "Title",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "description",
+      "label": "Description",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "programStatus",
+      "label": "Program Status",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "programStatusDate",
+      "label": "Program Status Date",
+      "type": "date",
+      "required": false
+    },
+    {
+      "id": "planYear",
+      "label": "Plan Year",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "planDate",
+      "label": "Plan Date",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "audience",
+      "label": "Audience",
+      "type": "select",
+      "default": "audiencetype1",
+      "admin_span": 2,
+      "options": [
+        {
+          "label": "AudienceType1",
+          "value": "audiencetype1"
+        },
+        {
+          "label": "AudienceType2",
+          "value": "audiencetype2"
+        },
+        {
+          "label": "AudienceType3",
+          "value": "audiencetype3"
+        }
+      ]
+      },
+    {
+      "id": "topicArea",
+      "label": "Topic Area",
+      "type": "select",
+      "default": "topicarea1",
+    "admin_span": 2,
+      "options": [
+        {
+          "label": "TopicArea1",
+          "value": "topicarea1"
+        },
+        {
+          "label": "TopicArea2",
+          "value": "topicarea2"
+        },
+        {
+          "label": "TopicArea3",
+          "value": "topicarea3"
+        }
+      ]
+    },
+    {
+      "id": "frontMatter",
+      "label": "Front Matter Included",
+      "type": "checkbox",
+      "required": false
+    },
+    {
+      "id": "store",
+      "label": "Store Program",
+      "type": "checkbox",
+      "required": false
+    },
+    {
+      "id": "notes",
+      "label": "Notes",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "views": [
+    {
+      "id": "list",
+      "nav": {
+        "label": "APD"
+      },
+      "tabs": [],
+      "fields": [
+        {
+          "id": "title"
+        },
+        {
+          "id": "description"
+        },
+        {
+          "id": "programStatus"
+        },
+        {
+          "id": "audience"
+        }
+      ]
+    },
+    {
+      "id": "edit",
+      "tabs": [],
+      "fields": []
+    },
+    {
+      "id": "new",
+      "tabs": [],
+      "fields": []
+    }
+  ]
+}

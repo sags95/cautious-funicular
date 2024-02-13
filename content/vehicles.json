@@ -1,0 +1,102 @@
+{
+  "collection": "vehicles",
+  "label": "Vehicles",
+  "description": "Stores vehicles",
+  "fields": [
+    {
+      "id": "make",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "model",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "year",
+      "type": "number"
+    },
+    {
+      "id": "customer",
+      "type": "customer_lookup",
+      "description": "Owner",
+      "required": true
+    },
+    {
+      "id": "status",
+      "label": "Status",
+      "type": "select",
+      "description": "Admin status of the vehicle",
+      "default": "submitted",
+      "admin_span": 2,
+      "options": [
+        {
+          "label": "Submitted",
+          "value": "submitted"
+        },
+        {
+          "label": "Approved",
+          "value": "approved"
+        }
+      ]
+
+    }
+  ],
+  "views": [
+    {
+      "id": "list",
+      "nav": {
+        "label": "Vehicles"
+      },
+      "tabs": [],
+      "fields": [
+        {
+          "id": "make"
+        },
+        {
+          "id": "model"
+        },
+        {
+          "id": "year"
+        },
+        {
+          "id": "customer"
+        }
+      ]
+    },
+    {
+      "id": "edit",
+      "title": "{{ make }} {{ model }}",
+      "tabs": [],
+      "fields": [
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "id": "make",
+            "label": "Make"
+          },
+          {
+            "id": "model",
+            "label": "Model"
+          },
+          {
+            "id": "year",
+            "label": "Year"
+          },
+          {
+            "id": "customer",
+            "label": "Customer"
+          }
+
+        ]
+      },
+      {
+        "id": "status"
+      }
+     
+      ]
+    }
+  ]
+}
